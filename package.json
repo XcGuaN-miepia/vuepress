@@ -13,10 +13,12 @@
   "author": "咩屁啊",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.7.1",
-    "yorkie": "^2.0.0"
+    "vuepress": "^1.7.1"
   },
   "gitHooks": {
     "post-commit": "npm run docs:build"
+  },
+  "dependencies": {
+    "yorkie": "^2.0.0"
   }
 }
