@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>package.json | Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/vuepress/assets/css/0.styles.9ee06435.css" as="style"><link rel="preload" href="/vuepress/assets/js/app.9e2d9f0b.js" as="script"><link rel="preload" href="/vuepress/assets/js/2.d0b8fed1.js" as="script"><link rel="preload" href="/vuepress/assets/js/12.bdd0c317.js" as="script"><link rel="prefetch" href="/vuepress/assets/js/10.1da9b7fa.js"><link rel="prefetch" href="/vuepress/assets/js/11.fae38115.js"><link rel="prefetch" href="/vuepress/assets/js/13.27d3c226.js"><link rel="prefetch" href="/vuepress/assets/js/14.17985adc.js"><link rel="prefetch" href="/vuepress/assets/js/3.37081823.js"><link rel="prefetch" href="/vuepress/assets/js/4.8862e869.js"><link rel="prefetch" href="/vuepress/assets/js/5.66929b0f.js"><link rel="prefetch" href="/vuepress/assets/js/6.36090e94.js"><link rel="prefetch" href="/vuepress/assets/js/7.7109a541.js"><link rel="prefetch" href="/vuepress/assets/js/8.f56d6ce0.js"><link rel="prefetch" href="/vuepress/assets/js/9.f23320db.js">
+    <link rel="stylesheet" href="/vuepress/assets/css/0.styles.9ee06435.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress/" class="home-link router-link-active"><!----> <span class="site-name">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/vue.html" class="nav-link">
+  vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/vue.html" class="nav-link">
+  vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress/docker 安装.html" class="sidebar-link">安装1</a></li><li><a href="/vuepress/Docker安装Jenkins.html" class="sidebar-link">下载 Jenkins</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="package-json"><a href="#package-json" class="header-anchor">#</a> package.json</h2> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    ...
+    <span class="token property">&quot;lint-staged&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^9.5.0&quot;</span><span class="token punctuation">,</span>
+    ...
+<span class="token punctuation">}</span>
+<span class="token property">&quot;gitHooks&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;pre-commit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lint-staged&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;lint-staged&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;*.{js,vue}&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">&quot;npm run lint&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 项目中需要查看有没有这个命令，vue-cli3 里面默认的是vue-cli-service lint</span>
+      <span class="token string">&quot;git add&quot;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p>重新安装依赖</p> <h2 id="hooks"><a href="#hooks" class="header-anchor">#</a> hooks</h2> <p>进入项目的<code>.git/hooks</code>文件夹，找到<code>pre-commit.sample</code>文件，把后缀名<code>.sample</code>删除</p> <h2 id="结果"><a href="#结果" class="header-anchor">#</a> 结果</h2> <p>提交有问题的代码之前，会执行<code>eslint</code>检验代码并且报错，报错后代码不能提交</p> <h2 id="更新"><a href="#更新" class="header-anchor">#</a> 更新</h2> <p>测试之后不是<code>eslint</code>的报错，而是<code>git</code>自带的检验测试，实际也不需要去修改<code>.sample</code>后缀名。<code>package.json</code>文件修改相同，或者 <code>devDependencies</code>不填写，直接执行下面命令</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">npm</span> i yorkie --save-dev
+$ <span class="token function">npm</span> i lint-staged --save-dev
+</code></pre></div><p><code>yorkie</code>会默认把<code>hooks</code>都打开，这时候会执行<code>eslint</code>命令了</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/29/2020, 11:26:01 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress/assets/js/app.9e2d9f0b.js" defer></script><script src="/vuepress/assets/js/2.d0b8fed1.js" defer></script><script src="/vuepress/assets/js/12.bdd0c317.js" defer></script>
+  </body>
+</html>

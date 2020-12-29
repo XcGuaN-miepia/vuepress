@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前言 | Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/vuepress/assets/css/0.styles.9ee06435.css" as="style"><link rel="preload" href="/vuepress/assets/js/app.9e2d9f0b.js" as="script"><link rel="preload" href="/vuepress/assets/js/2.d0b8fed1.js" as="script"><link rel="preload" href="/vuepress/assets/js/11.fae38115.js" as="script"><link rel="prefetch" href="/vuepress/assets/js/10.1da9b7fa.js"><link rel="prefetch" href="/vuepress/assets/js/12.bdd0c317.js"><link rel="prefetch" href="/vuepress/assets/js/13.27d3c226.js"><link rel="prefetch" href="/vuepress/assets/js/14.17985adc.js"><link rel="prefetch" href="/vuepress/assets/js/3.37081823.js"><link rel="prefetch" href="/vuepress/assets/js/4.8862e869.js"><link rel="prefetch" href="/vuepress/assets/js/5.66929b0f.js"><link rel="prefetch" href="/vuepress/assets/js/6.36090e94.js"><link rel="prefetch" href="/vuepress/assets/js/7.7109a541.js"><link rel="prefetch" href="/vuepress/assets/js/8.f56d6ce0.js"><link rel="prefetch" href="/vuepress/assets/js/9.f23320db.js">
+    <link rel="stylesheet" href="/vuepress/assets/css/0.styles.9ee06435.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress/" class="home-link router-link-active"><!----> <span class="site-name">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/vue.html" class="nav-link">
+  vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/vue.html" class="nav-link">
+  vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress/docker 安装.html" class="sidebar-link">安装1</a></li><li><a href="/vuepress/Docker安装Jenkins.html" class="sidebar-link">下载 Jenkins</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <div class="language-! extra-class"><pre class="language-text"><code>友情提示：本教程只提供vscode的提示方法！别的编辑器我不会搞！
+</code></pre></div><p>用过 <strong>vscode</strong> 和 <strong>element-ui</strong> 组件的小伙伴一定会体验过，他的组件能够自动提示名称以及提示可传入 <strong>Attributes</strong></p> <p><strong>下面是使用截图</strong> <img src="https://user-gold-cdn.xitu.io/2020/4/15/1717dcafea23978d?w=1462&amp;h=582&amp;f=png&amp;s=92351" alt=""> <img src="https://user-gold-cdn.xitu.io/2020/4/15/1717dcbaa65ef0ff?w=1696&amp;h=592&amp;f=png&amp;s=106360" alt=""></p> <p><strong>附一张 el-dialog 组件传值说明图</strong></p> <p><img src="https://user-gold-cdn.xitu.io/2020/4/15/1717dcd780399497?w=928&amp;h=862&amp;f=png&amp;s=97808" alt="">
+可以看到，它提示的值基本都是能对应上的。不同于 <strong>snippets</strong>，这种方式最大的好处就是按需引入需要的值，像 <strong>align</strong> 这些值甚至能提示可以输入哪些值。但是这种好用的方法除了在 <strong>element-ui</strong> 组件之外，我也没有见过别的组件有这种形式的提示。</p> <p>为了研究为什么能提示，我也下载过 <strong>element-ui</strong> 的源码，也参考过他的写法写过一个组件库，也考虑过是他的ts文件生成的提示。在一系列的尝试之后，我都失败了。此历程前前后后断断续续经历了半年时间，一直都没有任何思绪。直到最近，我考虑了一下是否是我安装的插件中有无对 <strong>element-ui</strong> 进行支持的。</p> <p>在不停的禁用启用我的插件之后，我终于发现了提示代码的插件： <strong>Vetur</strong>，就是那个写 <strong>Vue</strong> 代码必备插件。</p> <p>之前很长一段时间，我对 <strong>Vetur</strong> 的认知就只是 <strong>Vue</strong> 标签高亮提示而已，压根想不到他竟然会对 <strong>element-ui</strong> 进行提示支持。后来翻看他的文档之后，发现他的确是对 <strong>element-ui</strong> 进行支持的</p> <p><img src="https://user-gold-cdn.xitu.io/2020/4/15/1717deab20131b90?w=757&amp;h=210&amp;f=png&amp;s=36134" alt=""></p> <p>历尽千辛万苦终于找到了解决方法，下面就开始进入正题</p> <h2 id="_1、tags-attributes"><a href="#_1、tags-attributes" class="header-anchor">#</a> 1、Tags / Attributes</h2> <p><strong>Tags</strong> 和 <strong>Attributes</strong> 其实分别是 2 个不同的 json 文件，下面就以 <strong>element-ui</strong> 的 <strong>element-tags.json</strong> 和 <strong>element-attributes.json</strong> 来说。由于也没有找到具体文档，下面说明<strong>仅供参考！！</strong></p> <div class="language-! extra-class"><pre class="language-text"><code>element-tags.json
+</code></pre></div><p>https://github.com/ElementUI/element-helper-json/blob/master/element-tags.json
+<img src="https://user-gold-cdn.xitu.io/2020/4/15/1717e04da4906525?w=1832&amp;h=1464&amp;f=png&amp;s=261730" alt="">
+从标签上来说很好理解，定义了不同的组件的标签名。标签下面可以包含 4 个属性</p> <table><thead><tr><th>属性名</th> <th>作用</th></tr></thead> <tbody><tr><td>attributes</td> <td>可以触发提示的属性</td></tr> <tr><td>description</td> <td>组件的描述</td></tr> <tr><td>subtags</td> <td>上层组件（在实际用法中似乎这个值没有作用）</td></tr> <tr><td>defaults</td> <td>目前不是很清楚这个属性作用是什么</td></tr></tbody></table> <div class="language-! extra-class"><pre class="language-text"><code>element-attrbiutes.json
+</code></pre></div><p>https://github.com/ElementUI/element-helper-json/blob/master/element-attributes.json
+<img src="https://user-gold-cdn.xitu.io/2020/4/22/171a24ee60136edf?w=2226&amp;h=1954&amp;f=png&amp;s=833407" alt="">
+这个文件从文件名中就可以看出，这是一个描述属性用的文件。常见的属性就 3 个</p> <table><thead><tr><th>属性名</th> <th>作用</th></tr></thead> <tbody><tr><td>options</td> <td>属性可以选择的默认提示</td></tr> <tr><td>description</td> <td>属性的描述</td></tr> <tr><td>version</td> <td>版本号</td></tr></tbody></table> <p>这里面的属性大多数是公用的，但是有一些属性名称可能相同，但是作用描述却不相同，这该怎么办呢？</p> <p>其实这也是可以解决的</p> <p><img src="https://user-gold-cdn.xitu.io/2020/4/22/171a2651497dcf93?w=1870&amp;h=122&amp;f=png&amp;s=52120" alt="">
+比如这边都有用到 <strong>center</strong> 属性，可以在属性的前面加上'组件名/'这种格式，这样就可以不同的组件用同一个名称的提示，但是描述可以更改不一样的（弱弱吐槽一下，他们的 <strong>el-steps</strong> 好像写错了）</p> <h2 id="_2、如何配置到组件当中"><a href="#_2、如何配置到组件当中" class="header-anchor">#</a> 2、如何配置到组件当中</h2> <p>其实单看 <strong>element-ui</strong> 的组件库，其实看不出什么名堂，这也是为什么我花了很长一段时间也没有研究明白的原因。真相其实是，<strong>Vetur</strong> 对于 <strong>element-ui</strong> 做了支持。上面的 <strong>github</strong> 地址就是 <strong>element-ui</strong> 提示文件，<strong>Vetur</strong> 直接依赖了这两个文件，所以在 <strong>element-ui</strong> 组件当中不需要放上这两个文件。但是像我们这些小众的开发者，总不能要求 <strong>Vetur</strong> 插件开发者为我们的组件做一个支持吧。幸好，在查看 <strong>Vetur</strong> 的源码和参考国外的资料之后，我发现其实我们个人开发团队也能做代码提示。</p> <p>首先上面两个文件是必备的，对于组件库中的组件用法属性得先编写一套规则。完成规则创建后，将这两个文件放到项目当中。像我直接在项目当中新建了一个 <strong>vetur</strong> 名称的文件夹，将这两个文件放到了其中。之后只需要在 <strong>package.json</strong> 文件中加入几行代码</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;vetur&quot;: {
+  &quot;tags&quot;: &quot;vetur/tags.json&quot;,
+  &quot;attributes&quot;: &quot;vetur/attributes.json&quot;
+},
+</code></pre></div><p>当然如果像我一样放文件的位置，<strong>files</strong> 属性也得加一下 <strong>vetur</strong> 的目录
+<img src="https://user-gold-cdn.xitu.io/2020/4/22/171a278e2cedb374?w=204&amp;h=188&amp;f=png&amp;s=6399" alt=""></p> <p>完成这些步骤之后，打包到本地或者上传到 <strong>npm</strong> 当中，重新依赖一下文件，重启一下 <strong>vscode</strong> 编辑器之后，就能发现代码提示成功了</p> <h2 id="_3、我没有组件库怎么办"><a href="#_3、我没有组件库怎么办" class="header-anchor">#</a> 3、我没有组件库怎么办？</h2> <p>其实这个方法是我最开始找到的方法。既然 <strong>Vetur</strong> 插件对 <strong>element-ui</strong> 组件支持，并且插件又是用 <strong>js</strong> 写的，为什么不能直接去修改一下他的源码呢？</p> <p>1、首先找到 <strong>Vetur</strong> 插件在电脑的位置</p> <p><code>mac 地址：/Users/[user]/.vscode/extensions/octref.vetur-0.24.0</code></p> <p><strong>Windows</strong> 系统我没有进行尝试，毕竟百度搜一下很快就能找到插件安装的位置</p> <p>2、进入 <strong>sever/dist/modes/template/tagProviders</strong> 文件夹，找到 <strong>externalTagProviders.js</strong> 和 <strong>externalTagProviders.d.ts</strong> 文件</p> <div class="language-! extra-class"><pre class="language-text"><code>externalTagProviders.js
+</code></pre></div><p>可以先定义两个变量 <strong>newTags</strong> 和 <strong>newAttributes</strong> （当然你可以取别的名字），可以直接 <strong>require</strong> 获取你本地的规则</p> <div class="language- extra-class"><pre class="language-text"><code>const newTags = require(&quot;本地地址&quot;)
+const newAttributes = require(&quot;本地地址&quot;)
+</code></pre></div><p>再对外导出一个 <strong>newTagProvider</strong> 变量，具体写法可以参考 <strong>elementTagProvider</strong></p> <div class="language- extra-class"><pre class="language-text"><code>exports.newTagProvider = getExternalTagProvider('new', newTags, newAttributes);
+</code></pre></div><p>注意：第一个参数 <strong>'new'</strong> 不能随便取，之后下面步骤需要用到</p> <div class="language-! extra-class"><pre class="language-text"><code>externalTagProviders.d.ts
+</code></pre></div><p>在该文件当中补一段导出的 ts 提示（大概是这个作用？ts 学的不是很好）</p> <div class="language- extra-class"><pre class="language-text"><code>export declare const newTagProvider: IHTMLTagProvider;
+</code></pre></div><p>3、同目录下找到 <strong>index.js</strong> 文件，找到 <strong>exports.allTagProviders</strong>，在下面补上之前导出的 <strong>newTagProvider</strong></p> <div class="language- extra-class"><pre class="language-text"><code>exports.allTagProviders = [
+    htmlTags_1.getHTML5TagProvider(),
+    vueTags_1.getVueTagProvider(),
+    routerTags_1.getRouterTagProvider(),
+    externalTagProviders_1.elementTagProvider,
+    externalTagProviders_1.onsenTagProvider,
+    externalTagProviders_1.bootstrapTagProvider,
+    externalTagProviders_1.buefyTagProvider,
+    externalTagProviders_1.gridsomeTagProvider,
+    ++externalTagProviders_1.newTagProvider
+];
+</code></pre></div><p>在下面 <strong>getTagProviderSettings</strong> 方法中的 <strong>try</strong> 语句当中，加上判断是否加载提示方法</p> <div class="language- extra-class"><pre class="language-text"><code>if (dependencies['new']) {
+    settings['new'] = true;
+}
+</code></pre></div><p>在 <strong>dependencies</strong> 当中的 <strong>'new'</strong> 代表的是 <strong>package.json</strong> 当中有的依赖的名称，如果你实在没有组件库，你可以随便填个 <strong>Vue</strong> 啊，<strong>eslint</strong> 啊，前提是你项目有依赖。第二个 <strong>setting</strong> 当中的 <strong>'new'</strong> 代表的参数是否启用。这个值必须和第二步中我提示的那个参数一致才能生效。</p> <p>改完保存之后，重启一下 <strong>vscode</strong> 编辑器，代码提示也出来了，至此，大功告成。</p> <p>（ps: <strong>vscode</strong> 按 <strong>F1</strong> 之后输入命令 <strong>&gt;Reload Window</strong>,当前编辑器就可以重启了）</p> <h2 id="_4、写在最后"><a href="#_4、写在最后" class="header-anchor">#</a> 4、写在最后</h2> <p>作为一个理科生，实在不会组织语言，这是我的第一篇文章，我已经尽可能的写的详细明白，如果有哪部分不明白或者觉得哪里我写的不好不对，大家都可以提出来，我也会虚心接受。</p> <p>谢谢大家！</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/29/2020, 11:26:01 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress/assets/js/app.9e2d9f0b.js" defer></script><script src="/vuepress/assets/js/2.d0b8fed1.js" defer></script><script src="/vuepress/assets/js/11.fae38115.js" defer></script>
+  </body>
+</html>

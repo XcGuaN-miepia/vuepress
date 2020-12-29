@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/vuepress/assets/css/0.styles.9ee06435.css" as="style"><link rel="preload" href="/vuepress/assets/js/app.9e2d9f0b.js" as="script"><link rel="preload" href="/vuepress/assets/js/2.d0b8fed1.js" as="script"><link rel="preload" href="/vuepress/assets/js/14.17985adc.js" as="script"><link rel="prefetch" href="/vuepress/assets/js/10.1da9b7fa.js"><link rel="prefetch" href="/vuepress/assets/js/11.fae38115.js"><link rel="prefetch" href="/vuepress/assets/js/12.bdd0c317.js"><link rel="prefetch" href="/vuepress/assets/js/13.27d3c226.js"><link rel="prefetch" href="/vuepress/assets/js/3.37081823.js"><link rel="prefetch" href="/vuepress/assets/js/4.8862e869.js"><link rel="prefetch" href="/vuepress/assets/js/5.66929b0f.js"><link rel="prefetch" href="/vuepress/assets/js/6.36090e94.js"><link rel="prefetch" href="/vuepress/assets/js/7.7109a541.js"><link rel="prefetch" href="/vuepress/assets/js/8.f56d6ce0.js"><link rel="prefetch" href="/vuepress/assets/js/9.f23320db.js">
+    <link rel="stylesheet" href="/vuepress/assets/css/0.styles.9ee06435.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress/" class="home-link router-link-active"><!----> <span class="site-name">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/vue.html" class="nav-link">
+  vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/vue.html" class="nav-link">
+  vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress/docker 安装.html" class="sidebar-link">安装1</a></li><li><a href="/vuepress/Docker安装Jenkins.html" class="sidebar-link">下载 Jenkins</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>在源服务器当中查找有没有<code>~/.ssh</code>文件夹，没有该文件夹则使用命令生成</p> <div class="language- extra-class"><pre class="language-text"><code>mkdir -p ~/.ssh # 生成文件夹
+chmod 700 ~/.ssh # 生成的文件夹覆盖权限
+</code></pre></div><p>之后在<code>~/.ssh</code>目录生成密钥文件</p> <div class="language- extra-class"><pre class="language-text"><code>cd ~/.ssh # 123
+ssh-keygen -t rsa -P &quot;&quot; -f ~/.ssh/id_rsa # 生成秘钥文件
+</code></pre></div><p>然后进到<code>~/.ssh</code>文件夹当中，发现已经生成了<code>id_rsa		id_rsa.pub</code>文件</p> <div class="language- extra-class"><pre class="language-text"><code>miepiadeMacBook-Pro:~ xcguan$ cd ~/.ssh/
+miepiadeMacBook-Pro:.ssh xcguan$ ls
+authorized_keys	id_rsa		id_rsa.pub	known_hosts
+</code></pre></div><p>拷贝源服务器的<code>id_rsa.pub</code>内容到<code>authorized_keys</code>里面</p> <div class="language- extra-class"><pre class="language-text"><code>cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+</code></pre></div><p>在目标服务器也查找有没有<code>~/.ssh</code>文件夹，没有则和第一步相同，之后生成<code>authorized_keys</code>文件</p> <div class="language- extra-class"><pre class="language-text"><code>touch ~/.ssh/authorized_keys
+</code></pre></div><p>如果已经有<code>authorized_keys</code>文件，并且里面有内容，这样的话可以跳过上一步拷贝内容的操作，直接把源服务器中<code>id_rsa.pub</code>里面的内容拷贝到目标服务器的<code>authorized_keys</code>文件的末尾当中</p> <p>如果没有这个文件，那就直接覆盖文件即可，可能上一步生成文件也不需要操作，之后修改文件权限</p> <div class="language- extra-class"><pre class="language-text"><code>chmod 600 ~/.ssh/authorized_keys
+</code></pre></div><p>之后再使用命令行连接服务器，就不需要输入密码，直接就能访问</p> <div class="language- extra-class"><pre class="language-text"><code>ssh root@[目标服务器]</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/29/2020, 11:26:01 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress/assets/js/app.9e2d9f0b.js" defer></script><script src="/vuepress/assets/js/2.d0b8fed1.js" defer></script><script src="/vuepress/assets/js/14.17985adc.js" defer></script>
+  </body>
+</html>

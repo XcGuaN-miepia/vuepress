@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>用 vue-cli 搭建项目 | Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/vuepress/assets/css/0.styles.9ee06435.css" as="style"><link rel="preload" href="/vuepress/assets/js/app.9e2d9f0b.js" as="script"><link rel="preload" href="/vuepress/assets/js/2.d0b8fed1.js" as="script"><link rel="preload" href="/vuepress/assets/js/13.27d3c226.js" as="script"><link rel="prefetch" href="/vuepress/assets/js/10.1da9b7fa.js"><link rel="prefetch" href="/vuepress/assets/js/11.fae38115.js"><link rel="prefetch" href="/vuepress/assets/js/12.bdd0c317.js"><link rel="prefetch" href="/vuepress/assets/js/14.17985adc.js"><link rel="prefetch" href="/vuepress/assets/js/3.37081823.js"><link rel="prefetch" href="/vuepress/assets/js/4.8862e869.js"><link rel="prefetch" href="/vuepress/assets/js/5.66929b0f.js"><link rel="prefetch" href="/vuepress/assets/js/6.36090e94.js"><link rel="prefetch" href="/vuepress/assets/js/7.7109a541.js"><link rel="prefetch" href="/vuepress/assets/js/8.f56d6ce0.js"><link rel="prefetch" href="/vuepress/assets/js/9.f23320db.js">
+    <link rel="stylesheet" href="/vuepress/assets/css/0.styles.9ee06435.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress/" class="home-link router-link-active"><!----> <span class="site-name">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/vue.html" class="nav-link">
+  vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/vue.html" class="nav-link">
+  vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress/docker 安装.html" class="sidebar-link">安装1</a></li><li><a href="/vuepress/Docker安装Jenkins.html" class="sidebar-link">下载 Jenkins</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="用-vue-cli-搭建项目"><a href="#用-vue-cli-搭建项目" class="header-anchor">#</a> 用 vue-cli 搭建项目</h2> <p>话不多说，直接上代码</p> <p>vue-cli 安装过程不做讲解</p> <p>命令行输入</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ vue create vue-ts
+</code></pre></div><p>配置选择信息下载安装</p> <div class="language-shell extra-class"><pre class="language-shell"><code>? Please pick a preset: Manually <span class="token keyword">select</span> features
+? Check the features needed <span class="token keyword">for</span> your project: Babel, TS, Router, Vuex, CSS Pre-processors, Linter
+? Use class-style component syntax? Yes
+? Use Babel alongside TypeScript <span class="token punctuation">(</span>required <span class="token keyword">for</span> modern mode, auto-detected polyfills, transpiling JSX<span class="token punctuation">)</span>? Yes
+? Use <span class="token function">history</span> mode <span class="token keyword">for</span> router? <span class="token punctuation">(</span>Requires proper server setup <span class="token keyword">for</span> index fallback <span class="token keyword">in</span> production<span class="token punctuation">)</span> Yes
+? Pick a CSS pre-processor <span class="token punctuation">(</span>PostCSS, Autoprefixer and CSS Modules are supported by default<span class="token punctuation">)</span>: Less
+? Pick a linter / formatter config: Standard
+? Pick additional lint features: Lint on save, Lint and fix on commit
+? Where <span class="token keyword">do</span> you prefer placing config <span class="token keyword">for</span> Babel, ESLint, etc.? In dedicated config files
+? Save this as a preset <span class="token keyword">for</span> future projects? <span class="token punctuation">(</span>y/N<span class="token punctuation">)</span> 
+</code></pre></div><p>目录结构</p> <div class="language- extra-class"><pre class="language-text"><code>vue-ts
+├─.browserslistrc
+├─.editorconfig
+├─.eslintrc.js
+├─.gitignore
+├─README.md
+├─babel.config.js
+├─package-lock.json
+├─package.json
+├─tsconfig.json
+├─src
+|  ├─App.vue
+|  ├─main.ts
+|  ├─shims-tsx.d.ts
+|  ├─shims-vue.d.ts
+|  ├─views
+|  |   ├─About.vue
+|  |   └Home.vue
+|  ├─store
+|  |   └index.ts
+|  ├─router
+|  |   └index.ts
+|  ├─components
+|  |     └HelloWorld.vue
+|  ├─assets
+|  |   └logo.png
+├─public
+|   ├─favicon.ico
+|   └index.html
+</code></pre></div><p>安装完成之后，执行命令<code>npm run server</code>能打开页面就算成功</p> <h2 id="修改-home-vue-文件"><a href="#修改-home-vue-文件" class="header-anchor">#</a> 修改 Home.vue 文件</h2> <p>既然是使用ts的项目，我们就要全部使用ts来使用，但是看了下 <code>Home.vue</code>文件，还是用之前的写法，所以需要修改一下</p> <h6 id="原本的写法"><a href="#原本的写法" class="header-anchor">#</a> 原本的写法</h6> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token comment">// @ is an alias to /src</span>
+<span class="token keyword">import</span> HelloWorld <span class="token keyword">from</span> <span class="token string">'@/components/HelloWorld.vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    HelloWorld
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h6 id="修改的写法"><a href="#修改的写法" class="header-anchor">#</a> 修改的写法</h6> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span>
+<span class="token keyword">import</span> Component <span class="token keyword">from</span> <span class="token string">'vue-class-component'</span>
+
+<span class="token keyword">import</span> HelloWorld <span class="token keyword">from</span> <span class="token string">'@/components/HelloWorld.vue'</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'home'</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    HelloWorld
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Home</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>只是这样对比一下，其实用ts写的代码行数并没有减少，甚至还有引入其他的依赖，但是他存在肯定有他的理由，刚开始还没有体会到他的好处也是正常的。</p> <h2 id="从-0-开始开发页面"><a href="#从-0-开始开发页面" class="header-anchor">#</a> 从 0 开始开发页面</h2> <p>就从一个最简单的加减页面开始，由于想测试<code>prop</code>，将页面拆分成了组件</p> <div class="language- extra-class"><pre class="language-text"><code>views/
+├─About.vue
+├─Home.vue
+├─count
+|   ├─Count.vue
+|   ├─components
+|   |     └CountMain.vue
+</code></pre></div><h6 id="count-vue"><a href="#count-vue" class="header-anchor">#</a> Count.vue</h6> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>count-main</span> <span class="token attr-name">:importCount</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>count-main</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> Vue <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span>
+
+<span class="token keyword">import</span> CountMain <span class="token keyword">from</span> <span class="token string">'./components/CountMain.vue'</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	name<span class="token operator">:</span> <span class="token string">'Count'</span><span class="token punctuation">,</span>
+	components<span class="token operator">:</span> <span class="token punctuation">{</span>
+		CountMain
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Count</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><p>这个页面当中，我给子组件传入<code>importCount</code>为1</p> <h6 id="countmain-vue"><a href="#countmain-vue" class="header-anchor">#</a> CountMain.vue</h6> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+	&lt;div&gt;
+		&lt;button @click=&quot;add&quot;&gt;+&lt;/button&gt;
+		&lt;span&gt;{{ count }}&lt;/span&gt;
+		&lt;button @click=&quot;reduce&quot;&gt;-&lt;/button&gt;
+		&lt;span&gt;{{ computedCount }}&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script lang=&quot;ts&quot;&gt;
+import { Prop, Vue, Component } from 'vue-property-decorator'
+
+@Component({
+	name: 'CountMain'
+})
+export default class CountMain extends Vue {
+	// data
+	private defaultCount = 0
+	// prop
+	@Prop({ type: Number, default: 0 }) importCount!: number
+	// data
+	count = 1 + this.defaultCount + this.importCount
+	// computed
+	get computedCount () {
+		return `这个数字是${this.count}`
+	}
+
+	// method
+	/**
+	 * @description: 加法
+	 */
+	add () {
+		this.count++
+	}
+
+	/**
+	 * @description: 减法
+	 */
+	reduce () {
+		this.count--
+	}
+
+	// hook
+	mounted () {
+		console.log('这是一个计算页面')
+	}
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+
+&lt;/style&gt;
+</code></pre></div><p>用ts的写法对于<code>data</code>来说的确方便了许多，可以用修饰符<code>private</code>,<code>public</code>,<code>protect</code>来进行说明，默认为<code>public</code></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/29/2020, 11:26:01 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress/assets/js/app.9e2d9f0b.js" defer></script><script src="/vuepress/assets/js/2.d0b8fed1.js" defer></script><script src="/vuepress/assets/js/13.27d3c226.js" defer></script>
+  </body>
+</html>

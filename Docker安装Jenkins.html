@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>下载 Jenkins | Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/vuepress/assets/css/0.styles.9ee06435.css" as="style"><link rel="preload" href="/vuepress/assets/js/app.9e2d9f0b.js" as="script"><link rel="preload" href="/vuepress/assets/js/2.d0b8fed1.js" as="script"><link rel="preload" href="/vuepress/assets/js/7.7109a541.js" as="script"><link rel="prefetch" href="/vuepress/assets/js/10.1da9b7fa.js"><link rel="prefetch" href="/vuepress/assets/js/11.fae38115.js"><link rel="prefetch" href="/vuepress/assets/js/12.bdd0c317.js"><link rel="prefetch" href="/vuepress/assets/js/13.27d3c226.js"><link rel="prefetch" href="/vuepress/assets/js/14.17985adc.js"><link rel="prefetch" href="/vuepress/assets/js/3.37081823.js"><link rel="prefetch" href="/vuepress/assets/js/4.8862e869.js"><link rel="prefetch" href="/vuepress/assets/js/5.66929b0f.js"><link rel="prefetch" href="/vuepress/assets/js/6.36090e94.js"><link rel="prefetch" href="/vuepress/assets/js/8.f56d6ce0.js"><link rel="prefetch" href="/vuepress/assets/js/9.f23320db.js">
+    <link rel="stylesheet" href="/vuepress/assets/css/0.styles.9ee06435.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress/" class="home-link router-link-active"><!----> <span class="site-name">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/vue.html" class="nav-link">
+  vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/vue.html" class="nav-link">
+  vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress/docker 安装.html" class="sidebar-link">安装1</a></li><li><a href="/vuepress/Docker安装Jenkins.html" class="active sidebar-link">下载 Jenkins</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress/Docker安装Jenkins.html#下载-jenkins" class="sidebar-link">下载 Jenkins</a></li><li class="sidebar-sub-header"><a href="/vuepress/Docker安装Jenkins.html#运行-jenkins" class="sidebar-link">运行 Jenkins</a></li><li class="sidebar-sub-header"><a href="/vuepress/Docker安装Jenkins.html#构建项目" class="sidebar-link">构建项目</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="下载-jenkins"><a href="#下载-jenkins" class="header-anchor">#</a> 下载 Jenkins</h2> <p>从<a href="https://www.jenkins.io/download/" target="_blank" rel="noopener noreferrer">官网地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>进入，在下载的选项当中点击<code>Docker</code>,就会跳转到<code>Docker Hub</code>，或者直接在服务器当中输入命令</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ docker pull jenkins/jenkins
+</code></pre></div><blockquote><p>Docker安装不做多介绍</p></blockquote> <p>当我们查看镜像的时候能找到<code>Jenkins</code>之后，我们就算已经安装好了</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 安装后</span>
+miepiadeMacBook-Pro:~ xcguan$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+jenkins/jenkins     latest              13e2b551515d        <span class="token number">6</span> days ago          717MB
+</code></pre></div><h2 id="运行-jenkins"><a href="#运行-jenkins" class="header-anchor">#</a> 运行 Jenkins</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>$ docker run <span class="token punctuation">\</span>
+  -u root <span class="token punctuation">\</span>
+  -d <span class="token punctuation">\</span>
+  -p <span class="token number">22222</span>:8080 <span class="token punctuation">\</span>
+  -p <span class="token number">55555</span>:50000 <span class="token punctuation">\</span>
+  -v jenkins-data:/var/jenkins_home <span class="token punctuation">\</span>
+  jenkins/jenkins
+</code></pre></div><ul><li><p>-d  # 后台运行</p></li> <li><p>-p 22222:8080 # 映射容器的端口8080到主机上的端口22222，主机端口随意处理，官方推荐-p 8080:8080</p></li> <li><p>-p 55555:50000  # 映射容器的端口50000到主机上的端口55555，官方推荐-p 50000:50000</p></li> <li><p>-v jenkins-data:/var/jenkins_home # 设置映射磁盘</p> <div class="language-shell extra-class"><pre class="language-shell"><code>miepiadeMacBook-Pro:~ xcguan$ docker run <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>   -u root <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>   -d <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>   -p <span class="token number">22222</span>:8080 <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>   -p <span class="token number">55555</span>:50000 <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>   -v jenkins-data:/var/jenkins_home <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>   jenkins/jenkins
+1fc8c3ad57c1bbb708cd4201eb1559c8f08ed4d8b5eb7269fa1f3847bf0393f2
+</code></pre></div></li></ul> <p>运行完成之后，没有其他报错显示一串字符后，在浏览器中输入地址，端口号为 22222，进入后可以看到要输入密码</p> <p><img src="Docker%E5%AE%89%E8%A3%85Jenkins.assets/image1.png" alt="image1"></p> <p>查看密码的两种方式</p> <ol><li><div class="language-shell extra-class"><pre class="language-shell"><code>miepiadeMacBook-Pro:~ xcguan$ docker logs 1fc8c3 <span class="token comment"># 1fc8c3 是我 docker 镜像的 id，其实没有别的镜像只输第一个字也可以</span>
+
+Running from: /usr/share/jenkins/jenkins.war
+省略<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+<span class="token comment"># 在这边的就是密码，战术打码#</span>
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+省略<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+
+</code></pre></div></li> <li><div class="language-shell extra-class"><pre class="language-shell"><code>miepiadeMacBook-Pro:~ xcguan$ docker <span class="token builtin class-name">exec</span> -it -u <span class="token number">0</span> 1fc8c3 /bin/bash <span class="token comment"># 进入镜像 bash</span>
+root@1fc8c3ad57c1:/<span class="token comment"># cat var/jenkins_home/secrets/initialAdminPassword # 就是上一条战术打码下面的路径</span>
+<span class="token comment"># 在这边的就是密码，战术打码#</span>
+</code></pre></div><p>输入后直接点击安装推荐插件，更加方便</p></li></ol> <p><img src="Docker%E5%AE%89%E8%A3%85Jenkins.assets/image2.png" alt="image2"></p> <p>安装完成后，就是一些配置信息和账号注册，跳过或者默认都是可以的</p> <h2 id="构建项目"><a href="#构建项目" class="header-anchor">#</a> 构建项目</h2> <h4 id="安装git-parameter-nodejs"><a href="#安装git-parameter-nodejs" class="header-anchor">#</a> 安装Git Parameter，NodeJs</h4> <p>提前安装一下插件<code>Git Parameter</code>、<code>NodeJs</code>，进入<code>系统管理-&gt;插件管理</code>，先不进行下载，切换到<code>高级</code>选项，滑到最下面的升级站点，修改 URL</p> <div class="language- extra-class"><pre class="language-text"><code>https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json
+</code></pre></div><h6 id="详细的jenkins的镜像地址查询-http-mirrors-jenkins-ci-org-status-html"><a href="#详细的jenkins的镜像地址查询-http-mirrors-jenkins-ci-org-status-html" class="header-anchor">#</a> 详细的Jenkins的镜像地址查询：http://mirrors.jenkins-ci.org/status.html</h6> <p>提交后再选择可选插件搜索<code>Git Parameter</code>、<code>NodeJs</code>，勾选后点击直接安装，进入下一个页面后勾选自动重启就行，安装完成后会自动刷新页面</p> <blockquote><p>经常会下载不成功，多试几次总会可以的</p></blockquote> <h4 id="配置-nodejs"><a href="#配置-nodejs" class="header-anchor">#</a> 配置 NodeJs</h4> <p>进入全局配置工具，在<code>NodeJs</code>项下点击<code>新增NodeJS</code>，填了别名之后点击保存，另外<code>Node</code>版本不要选择太高，本人选择的是 10.13.0</p> <p><img src="Docker%E5%AE%89%E8%A3%85Jenkins.assets/image3.png" alt="image3"></p> <h4 id="构建配置"><a href="#构建配置" class="header-anchor">#</a> 构建配置</h4> <p>点击新建任务，输入任务名称，选择构建一个自由风格的软件项目，再点击确定</p> <p><img src="Docker%E5%AE%89%E8%A3%85Jenkins.assets/image4.png" alt="image4"></p> <p>源码管理中选择<code>Git</code>，输入仓库地址，在<code>Credentials</code>下面点击添加</p> <p><img src="Docker%E5%AE%89%E8%A3%85Jenkins.assets/image5.png" alt="image5"></p> <p>输入你的<code>git</code>用户名密码即可，然后点击添加，添加后<code>Credentials</code>下选择你新添加的凭证即可，下面的指定分支先填写<code>${branch}</code>，下一步有作用，如果不喜欢这个名字可以根据下一步修改</p> <p><img src="Docker%E5%AE%89%E8%A3%85Jenkins.assets/image6.png" alt="image6"></p> <p>再回到上面，参数化构建过程打钩选上，添加参数 点击 Git 参数，这个选项必须安装上面提到的<code>Git Parameter</code>插件才有</p> <p><img src="Docker%E5%AE%89%E8%A3%85Jenkins.assets/image7.png" alt="image7"></p> <p>在名称填写 <code>branch</code>或者喜欢的名字，参数类型选择<code>分支</code>，默认值填写<code>origin/master</code></p> <p><img src="Docker%E5%AE%89%E8%A3%85Jenkins.assets/image8.png" alt="image8"></p> <p>再在构建环境当中，勾选<code>Provide Node &amp; npm bin/ folder to PATH</code></p> <p><img src="Docker%E5%AE%89%E8%A3%85Jenkins.assets/image9.png" alt="image9"></p> <p>最后在构建当中选择<code>执行shell</code></p> <p><img src="Docker%E5%AE%89%E8%A3%85Jenkins.assets/image10.png" alt="image10"></p> <p>在命令里面输入</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> 
+<span class="token function">rm</span> -rf ./dist/*
+<span class="token function">npm</span> run build
+<span class="token function">rm</span> -rf /<span class="token punctuation">[</span>自定义Jenkins数据卷地址<span class="token punctuation">]</span>/*
+<span class="token function">cp</span> -rf ./dist/* /<span class="token punctuation">[</span>自定义Jenkins数据卷地址<span class="token punctuation">]</span>
+</code></pre></div><p>完成后保存，回到工程，这时候找到 <code>Build with Parameters</code>，点击后会去查询分支，选择想要的分支，然后再点击开始构建即可。第一次构建时间会很慢，可以慢慢等待</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/29/2020, 11:26:01 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepress/docker 安装.html" class="prev">
+        安装1
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress/assets/js/app.9e2d9f0b.js" defer></script><script src="/vuepress/assets/js/2.d0b8fed1.js" defer></script><script src="/vuepress/assets/js/7.7109a541.js" defer></script>
+  </body>
+</html>
