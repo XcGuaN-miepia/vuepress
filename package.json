@@ -19,6 +19,6 @@
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
-    "post-commit": "npm run docs:build"
+    "post-commit": "bash deploy.sh"
   }
 }
