@@ -15,10 +15,10 @@
   "devDependencies": {
     "vuepress": "^1.7.1"
   },
-  "gitHooks": {
-    "post-commit": "npm run docs:build"
-  },
   "dependencies": {
     "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "post-commit": "npm run docs:build"
   }
 }
