@@ -19,6 +19,6 @@
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
-    "pre-push": "bash deploy.sh"
+    "post-applypatch": "bash deploy.sh"
   }
 }
