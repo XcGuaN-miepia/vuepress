@@ -1,0 +1,22 @@
+{
+  "name": "vuepress",
+  "version": "1.0.0",
+  "description": "咩屁啊的 VuePress 文档",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [
+    "VuePress"
+  ],
+  "author": "咩屁啊",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.7.1",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+		"post-commit": "npm run docs:build"
+	}
+}
